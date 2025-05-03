@@ -152,7 +152,7 @@ p <- ggplot(d_sample, aes(x = `location-long`, y = `location-lat`, color = `indi
   theme_minimal() +
   coord_fixed()
 
-# 3. Animate (no need to expand or fill)
+# 3. Animate
 animate(p, nframes = length(unique(d_sample$date)), fps = 1, width = 800, height = 600, renderer = gifski_renderer("bob_davinci_trajectory_daily.gif"))
 
 ```
